@@ -20,7 +20,7 @@ do
   XMLFILE=$(unzip -l $i | grep .xml | cut -c "31-")
 
   # Retrieve xml file from zip file and call python script to parse, tokenize and count
-  LEN=$(unzip -p "$i" "$XMLFILE" | $PYTHON parse-and-count.py)
+  LEN=$(unzip -p "$i" "$XMLFILE" | $PYTHON parse-and-count.py --input XML)
   
   # Print out word count and dhc file name
   echo "$LEN $i"

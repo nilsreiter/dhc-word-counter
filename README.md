@@ -34,3 +34,14 @@ The way the script works can be explained quickly: The script extracts all text 
 
 ## Implications
 This procedure has consequences: Footnotes, captions, references, URLs, section titles are all included in the word count, as they are XMLified below the `body` element. 
+
+
+## Alternative Word Counters
+
+| String | Google Docs | MS Word | This script |
+| -------- | ----------------- | ------------- | ------------- |
+| This is a sentence without anything interesting. | 7 | 7 | 7 | 
+| This is 1 sentence with 3 digits and parentheses (5). | 10 | 10 | 10 |
+| This sentence has a multi-word! | 5 | 5 | 6 |
+| A sentence with an equation: 5+5 = 10. | 8 | 8 | 8 |
+| 1 question with a date range: 1705-1732? | 7 | 7 | 8 |
