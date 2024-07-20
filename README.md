@@ -27,6 +27,8 @@ The output should look like this:
 ...
 ```
 
+The output does not contain paper ids, because they are not included in the xml. This would be more convenient, but requires changing the XML format.
+
 ## Logic
 The way the script works can be explained quickly: The script extracts all text content below the `body` element of the TEI/XML file. This text is then tokenized using NLTK and regular expressions. After that, all tokens that do not consist of alphanumeric characters are removed (i.e., we don't count punctuation). The length of the remaining list is then returned.
 
